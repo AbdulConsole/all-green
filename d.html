@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGAFPAMA - Green Fields, Bright Future</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/new.css">
 </head>
 <body>
     <nav class="navbar">
@@ -25,9 +25,9 @@
     <header id="home">
         <div class="slider">
             <div class="slides">
-                <div class="slide"><img src="assets/images/crop1.jpg" alt="Crops"></div>
-                <div class="slide"><img src="assets/images/livestock1.jpg" alt="Livestock"></div>
-                <div class="slide"><img src="assets/images/farming-equipment.jpg" alt="Equipment"></div>
+                <img src="assets/images/crop1.jpg" alt="Crops" class="slide">
+                <img src="assets/images/livestock1.jpg" alt="Livestock" class="slide">
+                <img src="assets/images/farming-equipment.jpg" alt="Equipment" class="slide">
             </div>
             <div class="header-content">
                 <h1>All Green Agro Field Farmers, Processors & Marketers Association (AGAFPAMA)</h1>
@@ -67,7 +67,7 @@
             <div class="review-card">
                 <img src="assets/images/reviewer1.jpg" alt="Amina" class="reviewer-img">
                 <p>"AGAFPAMA transformed my farming business with their smart agriculture techniques. My yields have doubled!"</p>
-                <h3>Amina Suleiman</h3>
+                <h3>Mohammed Umar Bago</h3>
                 <span class="review-role">Farmer, Niger State</span>
             </div>
             <div class="review-card">
@@ -107,17 +107,31 @@
     </footer>
 
     <script>
-        // Slider functionality
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        function showSlides() {
-            slides.forEach((slide, index) => {
-                slide.style.display = index === slideIndex ? 'block' : 'none';
+        // Improved slider functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            let slideIndex = 0;
+
+            function showSlides() {
+                slides.forEach((slide, index) => {
+                    slide.style.opacity = index === slideIndex ? '1' : '0';
+                    slide.style.position = 'absolute';
+                    slide.style.transition = 'opacity 1s ease-in-out';
+                });
+                slideIndex = (slideIndex + 1) % slides.length;
+            }
+
+            // Initial display
+            slides.forEach(slide => {
+                slide.style.position = 'absolute';
+                slide.style.top = '100';
+                slide.style.left = '0';
+                slide.style.width = '100%';
+                slide.style.height = '100%';
             });
-            slideIndex = (slideIndex + 1) % slides.length;
-        }
-        setInterval(showSlides, 3000);
-        showSlides();
+            showSlides();
+            setInterval(showSlides, 3000);
+        });
 
         // Mobile nav toggle
         document.querySelector('.nav-toggle').addEventListener('click', () => {
