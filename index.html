@@ -4,20 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGAFPAMA - Green Fields, Bright Future</title>
+    
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/nav-slider.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="assets/images/agafpama-logo.png" alt="AGAFPAMA Logo" class="logo">
-            <h1>All Green Agro Field Farmers, Processors & Marketers Association (AGAFPAMA)</h1>
-            <p>Green Fields, Bright Future. Grow More, Earn More</p>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <img src="assets/images/logo3.png" alt="AGAFPAMA Logo" class="nav-logo">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Why us</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+    <!-- Hero Section with Image Slider -->
+    <div class="hero">
+        <div class="slider">
+            <div class="slide" style="background-image: url('assets/images/livestock1.jpg');">
+                <div class="overlay">
+                    <h1>AGAFPAMA</h1>
+                    <p>All Green Agro Field Farmers, Processors & Marketers Association.</p>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('assets/images/crop1.jpg');">
+                <div class="overlay">
+                    <h1>Grow Your Business</h1>
+                    <p>Green Fields, Bright Future..</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('assets/images/farming-equipment.jpg');">
+                <div class="overlay">
+                    <h1>Growth</h1>
+                    <p>Grow More, Earn More. with AGAFPAMA</p>
+                    <a href="#" class="btn">Join Now</a>
+                </div>
+            </div>
         </div>
-    </header>
+        
+        <!-- Slider Navigation -->
+        <div class="slider-nav">
+            <span class="dot active" onclick="changeSlide(0)"></span>
+            <span class="dot" onclick="changeSlide(1)"></span>
+            <span class="dot" onclick="changeSlide(2)"></span>
+        </div>
+    </div>
 
     <section class="welcome">
         <h2>Welcome to AGAFPAMA</h2>
         <p>We are dedicated to empowering adults, youth, and women through smart agriculture to increase food security, drive economic growth, and improve livelihoods. Join us in cultivating a sustainable future for Niger State and beyond.</p>
+    </section>
+    
+    <section class="view">
+  
     </section>
 
     <section class="services">
@@ -40,25 +93,170 @@
         </div>
     </section>
 
-    <section class="cta">
-        <h2>Register & Join Us</h2>
-        <p>Ready to grow your future? Take the first step today!</p>
-        <a href="#" class="btn">Register Now</a>
-        <a href="#" class="btn">Join Us</a>
+    <section class="reviews" id="reviews">
+        <h2>What Our Members Say</h2>
+        <div class="review-container">
+            <div class="review-card">
+                <img src="assets/images/reviewer1.jpg" alt="Amina" class="reviewer-img">
+                <p>"AGAFPAMA transformed my farming business with their smart agriculture techniques. My yields have doubled!"</p>
+                <h3>Mohammed Umar Bago</h3>
+                <span class="review-role">Farmer, Niger State</span>
+            </div>
+            <div class="review-card">
+                <img src="assets/images/reviewer2.jpg" alt="Chinedu" class="reviewer-img">
+                <p>"The training and support I received helped me start my own processing business. I'm now earning more than ever."</p>
+                <h3>Chinedu Okeke</h3>
+                <span class="review-role">Processor, Minna</span>
+            </div>
+            <div class="review-card">
+                <img src="assets/images/reviewer3.jpg" alt="Fatima" class="reviewer-img">
+                <p>"Joining AGAFPAMA opened new market opportunities for my produce. It's been a game-changer."</p>
+                <h3>Fatima Ibrahim</h3>
+                <span class="review-role">Marketer, Niger State</span>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <h3>Contact Us</h3>
-        <p><strong>Email:</strong> <a href="mailto:allgreenniger1@gmail.com">allgreenniger1@gmail.com</a></p>
-        <p><strong>Phone:</strong>  
-            +234 (0)813-215-5552  
-            +234 (0)915-791-0485  
-            +234 (0)703-205-3796  
-            +234 (0)806-168-8848  
-        </p>
-        <p><strong>Address:</strong> Flat No: 001, House No. 26 Okada Road-Minna, Niger State, Nigeria</p>
-        <p><strong>Certification:</strong> Certification Number: RC7348422</p>
-        <p><strong>Visit Our Website:</strong> <a href="http://allagrofieldfarmers.com.ng">http://allagrofieldfarmers.com.ng</a></p>
+    <section class="cta" id="register">
+        <h2>Register & Join Us</h2>
+        <p>Ready to grow your future? Take the first step today!</p>
+        <a href="#" class="btn-cta">Register Now</a>
+        <a href="#" class="btn-cta">Join Us</a>
+    </section>
+    
+    <section class="executive-structure">
+        <h2>Executive Structure of the Association</h2>
+
+        <div class="executive-category">
+            <button class="category-header">01 National Executives</button>
+            <ul class="category-list">
+                <li>National President</li>
+                <li>National Deputy President</li>
+                <li>National Vice President Arable Crops</li>
+                <li>National Vice President Livestock</li>
+                <li>National Vice President Forestry/Tree Crops</li>
+                <li>Zonal Vice President North West</li>
+                <li>Zonal Vice President North East</li>
+                <li>Zonal Vice President North Central</li>
+                <li>Zonal Vice President South West</li>
+                <li>Zonal Vice President South South</li>
+                <li>Zonal Vice President South East</li>
+                <li>National Secretary</li>
+                <li>Deputy National Secretary</li>
+                <li>National Treasurer</li>
+                <li>National Financial Secretary</li>
+                <li>National Publicity Secretaries (1, 2, 3)</li>
+                <li>National Program Coordinator</li>
+                <li>National Welfare Secretary</li>
+                <li>National Auditor</li>
+            </ul>
+        </div>
+
+        <div class="executive-category">
+            <button class="category-header">02 State Executives</button>
+            <ul class="category-list">
+                <li>State Chairman</li>
+                <li>Deputy Chairman</li>
+                <li>Vice Chairman Arable Crops</li>
+                <li>Vice Chairman Livestock</li>
+                <li>Vice Chairman Forestry/Tree Crops</li>
+                <li>Zonal Vice Chairmen (A, B, C)</li>
+                <li>State Secretary</li>
+                <li>Financial Secretary</li>
+                <li>Assistant Financial Secretary</li>
+                <li>Organizing Secretary</li>
+                <li>Assistant Organizing Secretary</li>
+                <li>Welfare Secretary</li>
+                <li>Publicity Secretaries (1, 2, 3)</li>
+                <li>Youth Leader</li>
+                <li>Woman Leader</li>
+                <li>Auditor</li>
+                <li>Legal Adviser</li>
+            </ul>
+        </div>
+
+        <div class="executive-category">
+            <button class="category-header">03 Local Government Executives</button>
+            <ul class="category-list">
+                <li>Coordinator</li>
+                <li>Assistant Coordinator</li>
+                <li>Secretary</li>
+                <li>Assistant Secretary</li>
+                <li>Treasurer</li>
+                <li>Financial Secretary</li>
+                <li>Assistant Financial Secretary</li>
+                <li>Organizing Secretary</li>
+                <li>Assistant Organizing Secretary</li>
+                <li>Welfare Secretary</li>
+                <li>Assistant Welfare Secretary</li>
+                <li>Publicity Secretaries (1, 2)</li>
+                <li>Youth Leader</li>
+                <li>Woman Leader</li>
+                <li>Auditor</li>
+                <li>Legal Adviser</li>
+            </ul>
+        </div>
+
+        <div class="executive-category">
+            <button class="category-header">04 Ward Executives</button>
+            <ul class="category-list">
+                <li>Coordinator</li>
+                <li>Assistant Coordinator</li>
+                <li>Secretary</li>
+                <li>Assistant Secretary</li>
+                <li>Treasurer</li>
+                <li>Financial Secretary</li>
+                <li>Assistant Financial Secretary</li>
+                <li>Organizing Secretary</li>
+                <li>Assistant Organizing Secretary</li>
+                <li>Welfare Secretary</li>
+                <li>Assistant Welfare Secretary</li>
+                <li>Publicity Secretary</li>
+                <li>Youth Leader</li>
+                <li>Woman Leader</li>
+                <li>Auditor</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="view2"></section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: <a href="mailto:allgreenniger1@gmail.com">allgreenniger1@gmail.com</a></p>
+          <p>Phone:</p>
+                <ul>
+                    <li><a href="tel:+2348132155552">+234 (0)813-215-5552</a></li>
+                    <li><a href="tel:+2349157910485">+234 (0)915-791-0485</a></li>
+                    <li><a href="tel:+2347032053796">+234 (0)703-205-3796</a></li>
+                    <li><a href="tel:+2348061688848">+234 (0)806-168-8848</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section address">
+                <h2>Address</h2>
+                <p>Flat No: 001, House No. 26 Okada Road-Minna, Niger State, Nigeria</p>
+            </div>
+            
+            <div class="footer-section certification">
+                <h2>Certification</h2>
+                <p>Certification Number: RC7348422</p>
+            </div>
+            
+            <div class="footer-section website">
+                <h2>Visit Our Website</h2>
+                <p><a href="http://allagrofieldfarmers.com.ng" target="_blank">allagrofieldfarmers.com.ng</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 All Agrofield Farmers. All Rights Reserved.</p>
+        </div>
     </footer>
+    
+    <script src="assets/js/nav-slider.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,41 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+:root{
+    --bg-green: #1e3a34;
+    --bg-light:#f0f7f4;
+    --dark:#1f2630;
+    --f-green: #1e3a34;
 }
-
-body {
-    background-color: #f0f7f4;
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration:none;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background:var(--bg-light);
     color: #333;
     line-height: 1.6;
-}
-
-header {
-    background-color: #2e7d32;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    max-width: 300px;
-    margin-bottom: 1rem;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-    font-style: italic;
 }
 
 section {
@@ -61,12 +44,12 @@ ul {
     list-style-type: none;
 }
 
-ul li {
+.why-choose-us > ul li {
     padding: 0.5rem 0;
     position: relative;
 }
 
-ul li:before {
+.why-choose-us > ul > li:before {
     content: "✓";
     color: #2e7d32;
     margin-right: 0.5rem;
@@ -84,34 +67,6 @@ ul li:before {
     max-width: 200px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.cta {
-    text-align: center;
-    background-color: #4caf50;
-    color: white;
-    padding: 3rem 1rem;
-}
-
-.cta h2 {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #ffca28;
-    color: #2e7d32;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 0.5rem;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background-color: #f57c00;
-    color: white;
 }
 
 footer {
@@ -143,5 +98,181 @@ footer a:hover {
     .btn {
         display: block;
         margin: 0.5rem auto;
+    }
+}
+/* View Section Style */
+.view {
+  width: 100%;
+  height: 400px;
+  background: url(/assets/images/flyer1.png);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  border-radius: 0px;
+}
+
+.view2 {
+  width: 100%;
+  height: 400px;
+  background: url(/assets/images/flyer2.png);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  border-radius: 0px;
+}
+
+/* Reviews Section Styles */
+.reviews {
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.review-container {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.review-card {
+    flex: 0 0 300px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    scroll-snap-align: center;
+}
+
+.reviewer-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    border: 2px solid #2e7d32;
+}
+
+.review-card p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.review-card h3 {
+    color: #2e7d32;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-role {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+}
+
+/* CTA Styles */
+.cta {
+    text-align: center;
+    background-color: var(--f-green);
+    color: white;
+    padding: 3rem 1rem;
+    border-radius: 0px;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #ffca28;
+    color: #2e7d32;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #f57c00;
+    color: white;
+}
+
+/* executive structure  */
+
+.executive-structure {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #F4F9E2;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Header */
+h2 {
+    text-align: center;
+    color: #0A3D02;
+}
+
+/* Executive Category */
+.executive-category {
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+/* Category Header (Clickable Button) */
+.category-header {
+    width: 100%;
+    background-color: var(--f-green);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.category-header:hover {
+    background-color: #4A8C35;
+}
+
+/* Executive List (Initially Hidden) */
+.category-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: #DFF3BF;
+    display: none;
+    border-radius: 6px;
+}
+
+.category-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid #A2D56E;
+}
+
+.category-list li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .executive-structure {
+        width: 90%;
+    }
+
+    .category-header {
+        font-size: 14px;
+        padding: 10px;
     }
 }
