@@ -1,0 +1,73 @@
+ /* Contact Section Styling */
+.contact-i {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*.contact h2, .contact h3 {
+    color: #2c3e50;
+}
+
+.contact p {
+    color: #555;
+    line-height: 1.6;
+}
+*/
+ 
+ /* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #27ae60;
+    outline: none;
+}
+
+button {
+    background-color: var(--f-green);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #219150;
+}
+
+
+
+.contact-view {
+  background: url(/assets/images/flyer4.png);
+  width: 100%;
+  height: 400px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  border-radius: 0px;
+}
