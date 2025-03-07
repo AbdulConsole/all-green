@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="/assets/css/about.css">
     <link rel="stylesheet" href="assets/css/regi.css">
+    <link rel="stylesheet" href="assets/css/radio.css">
+    
 </head>
 <body>
   <!-- Navbar -->
@@ -36,13 +38,13 @@
       <div class="form-box">
         <h2>Join Us Today</h2>
         <p>Be part of a transformative movement and make an impact.</p> 
-        <p>Membership registration link (Registration Fees is Non Refundable) Registration for both Wet Season and Dry Season farming programs 2025/2026</p>
+        <p>Membership registration link <b>(Registration Fees is Non Refundable)</b> Registration for both Wet Season and Dry Season farming programs 2025/2026</p>
       </div>
     </section>
     
     <section class="container">
       <div class="form-box">
-        <form action="submit_registration.php" method="POST">
+        <form action="server/submit_registration.php" method="POST">
           
           <div class="input-group">
             <label for="first-name">First Name</label>
@@ -93,19 +95,151 @@
           
           <div class="input-group">
             <label for="home-address">Home Address</label>
-            <input type="text" id="home-address" name="phone_number" placeholder="Enter your phone number" required>
+            <input type="text" id="home-address" name="home_address" placeholder="Enter your home address" required>
           </div>
           
           <div class="input-group">
-            <label for="occupation">Occupation</label>
-            <input type="text" id="occupation" name="occupation" placeholder="Your occupation">
+            <label for="community">Community / Village</label>
+            <input type="text" id="community" name="community" placeholder="Enter your community / village">
           </div>
 
           <div class="input-group">
-            <label for="why-join">Why do you want to join?</label>
-            <textarea id="why-join" name="why_join" rows="4" placeholder="Tell us why you want to be part of us"></textarea>
+            <label for="ward">Ward</label>
+            <input type="text" id="ward" name="ward" placeholder="Enter your ward">
           </div>
+          
+          <div class="input-group">
+            <label for="lga">LGA</label>
+            <input type="text" id="lga" name="lga" placeholder="Enter your lga">
+          </div>
+          
+          <hr>
 
+          <div class="input-group">
+            <p><strong>WHAT TYPE OF PRODUCTION ARE YOU INTO?</strong></p>
+            <label><input type="radio" name="production_type" value="crops"> Crops Production</label>
+            <label><input type="radio" name="production_type" value="livestock"> Livestock Production</label>
+            <label><input type="radio" name="production_type" value="fishery"> Fishery Production</label>
+            <label><input type="radio" name="production_type" value="forestry"> Tree/Forestry Production</label>
+          </div>
+          
+          <hr>
+          
+          <div class="input-group">
+            <label for="production_crop">NAME YOUR PRODUCTIONS CROP</label>
+            <input type="text" id="production_crop" name="production_crop" placeholder="Your answer">
+          </div>
+          
+          <div class="input-group">
+            <label for="processing">WHAT ARE YOU PROCESSING?</label>
+            <input type="text" id="processing" name="processing" placeholder="Your answer">
+          </div>
+          
+          <div class="input-group">
+            <label for="marketing">WHAT ARE YOU MARKETING?</label>
+            <input type="text" id="marketing" name="marketing" placeholder="Your answer">
+          </div>
+          
+          <div class="input-group">
+            <label for="farm_address">FARM/BUSINESS LOCATION ?</label>
+            <input type="text" id="farm_address" name="farm_address" placeholder="Your answer">
+          </div>
+          
+          <div class="input-group">
+            <label for="farm_ward">WARD OF FARM/BUSINESS LOCATION?</label>
+            <input type="text" id="farm_ward" name="farm_ward" placeholder="Your answer">
+          </div>
+          
+          <div class="input-group">
+            <label for="farm_lga">LGA OF FARM/BUSINESS LOCATION ?</label>
+            <input type="text" id="farm_lga" name="farm_lga" placeholder="Your answer">
+          </div>
+          
+          <div class="input-group">
+            <label for="farm_coord">FARM/BUSINESS LOCATION  COORDINATES?</label>
+            <input type="text" id="farm_coord" name="farm_coord" placeholder="Your answer">
+          </div>
+          
+          <div class="input-group">
+            <label for="next_crop">WHAT CROPS DO YOU INTEND TO PLANT IN THE FORTHCOMING WET AND DRY SEASON FARMING 2025</label>
+            
+            <select name="next_crop" id="next_crop">
+              <option value="maize">Maize</option>
+              <option value="rice">Rice</option>
+              <option value="soyabeans">Soyabeans</option>
+              <option value="sesame">Sesame</option>
+              <option value="cassava">Cassava</option>
+              <option value="yam">Yam</option>
+              <option value="cowpea">Cowpea</option>
+              <option value="pigeon-pea">Pigeon Pea</option>
+            </select>
+            
+          </div>
+          
+          <div class="input-group">
+            <label for="associate_belong">WHAT IS THE NAME OF THE COMMODITY/ASSOCIATION/COOPERATAIVE YOU BELONGS TO?</label>
+            <input type="text" id="associate_belong" name="associate_belong" placeholder="Your answer">
+          </div>
+          
+          <div class="input-group">
+            <label for="land_size">NO. OF HECTORAGE COVERING?</label>
+            <select name="land_size" id="land_size">
+              <option value="1-5">1-5</option>
+              <option value="6-10">6-10</option>
+              <option value="11-20">11-20</option>
+              <option value="21-50">21-50</option>
+              <option value="51-100">51-100</option>
+              <option value="101-200">101-200</option>
+              <option value="201-500">201-500</option>
+              <option value="501-1000">501-1000</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="isLoan">DO YOU WANT LOAN TO BOOST YOUR PRODUCTION, PROCESSING AND MARKETTING ?</label>
+            <input type="radio" value="yes" name="isLoan">Yes
+            <input type="radio" value="no" name="isLoan">No
+          </div>
+          
+          <div class="input-group">
+            <label for="acct_num">ACCOUNT NUMBER</label>
+            <input type="text" id="acct_num" name="acct_num" placeholder="Enter your account number">
+          </div>
+          
+          <div class="input-group">
+            <label for="bank_name">BANK NAME</label>
+            <input type="text" id="bank_name" name="bank_name" placeholder="Enter your bank name">
+          </div>
+          
+          <div class="input-group">
+            <label for="acct_name">ACCOUNT NAME</label>
+            <input type="text" id="acct_name" name="acct_name" placeholder="Enter your account name">
+          </div>
+          
+          <div class="input-group">
+            <label for="membership_category">CATEGORY OF YOUR MEMBERSHIP REGISTRATION?</label>
+            <select id="membership_category" name="membership_category">
+              <option value="small-holder">Small holder farmer (5k non-refundable)</option>
+              <option value="cluster-community">Cluster-community farmer (10k non-refundable)</option>
+              <option value="large-holder">Large Scale farmer (20k non-refundable)</option>
+              <option value="processor">Processor (15k non-refundable)</option>
+              <option value="marketer">marketer (15k non-refundable)</option>
+              <option value="national_company">National Company (100k non-refundable)</option>
+              <option value="international_company">International Company (500k non-refundable)</option>
+            </select>
+          </div>
+  
+          <div class="input-group">
+            <label for="idCard">VALID ID CARDS UPLOAD ?</label>
+            <input type="file" id="idCard" name="idCard">
+          </div>
+          
+          <div class="input-group">
+            <label for="passport">PASSPORT UPLOAD?
+            </label>
+            <input type="file" id="passport" name="passport" >
+          </div>
+          
           <button type="submit" class="btn">Register Now</button>
 
         </form>
