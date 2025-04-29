@@ -103,3 +103,10 @@ hr {
   padding: 0;
 }
 
+.steps {
+    color: red;
+    text-align: center;
+}
+.regFees {
+    flex-direction: column;
+}
